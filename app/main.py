@@ -1,7 +1,9 @@
+from typing import List, Dict, Any
 from .errors import VaccineError, NotWearingMaskError
+from .cafe import Cafe
 
 
-def go_to_cafe(friends, cafe):
+def go_to_cafe(friends: List[Dict[str, Any]], cafe: Cafe) -> str:
     vaccine_issues = 0
     mask_issues = 0
 
