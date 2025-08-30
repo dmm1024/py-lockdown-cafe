@@ -1,6 +1,10 @@
 from typing import List, Dict, Any
-from .errors import VaccineError, NotWearingMaskError
-from .cafe import Cafe
+
+from app.cafe import Cafe
+from app.errors import (
+    VaccineError,
+    NotWearingMaskError,
+)
 
 
 def go_to_cafe(friends: List[Dict[str, Any]], cafe: Cafe) -> str:
@@ -19,5 +23,5 @@ def go_to_cafe(friends: List[Dict[str, Any]], cafe: Cafe) -> str:
         return "All friends should be vaccinated"
     elif mask_issues > 0:
         return f"Friends should buy {mask_issues} masks"
-    else:
-        return f"Friends can go to {cafe.name}"
+
+    return f"Friends can go to {cafe.name}"
